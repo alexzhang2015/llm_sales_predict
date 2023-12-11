@@ -100,11 +100,10 @@ with gr.Blocks() as demo:
     gr.Markdown(
         "## Start typing below and then click **Run** to see the output.")
     with gr.Row():
-        inp = gr.Textbox(placeholder="City Weather?")
+        inp = gr.Textbox(placeholder="Sales Predict?")
         out = gr.Textbox()
     btn = gr.Button("Run")
     btn.click(fn=run_predict_sales, inputs=inp, outputs=out)
 
-# 添加按钮到界面
 demo.launch(share=True)
 # demo.launch(share=True, auth=("username", "password"))
